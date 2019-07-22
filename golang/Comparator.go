@@ -15,6 +15,7 @@ const (
 	LessThan           ComparatorOperation = "<"
 	GreaterThanOrEqual ComparatorOperation = ">="
 	LessThanOrEqual    ComparatorOperation = "<="
+	IN                 ComparatorOperation = " in "
 )
 
 var comparators = make([]ComparatorOperation, 0)
@@ -45,6 +46,7 @@ func initComparators() {
 		comparators = append(comparators, Equal)
 		comparators = append(comparators, GreaterThan)
 		comparators = append(comparators, LessThan)
+		comparators = append(comparators, IN)
 	}
 }
 
